@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Memory</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>🧠 Jeu de Memoire</h1>
+        <p>Trouvez toutes les paires pour gagner !</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat-item">
+            <span class="icon">👆</span>
+            <span id="moves-counter">0 mouvements</span>
+        </div>
+        <div class="stat-item">
+            <span class="icon">⏱️</span>
+            <span id="timer">00:00</span>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn btn-reset" id="reset-btn">
+            <span>🔄</span>
+            Nouvelle partie
+        </button>
+        <button class="btn btn-save" id="save-btn">
+            <span>💾</span>
+            Sauvegarder
+        </button>
+        <button class="btn btn-load" id="load-btn" disabled>
+            <span>📂</span>
+            Reprendre
+        </button>
+    </div>
+
+    <div class="game-board" id="game-board">
+
+    </div>
+
+    <div class="instructions">
+        <p>Cliquez sur les cartes pour les retourner et trouvez les paires identiques.</p>
+        <p>Utilisez les boutons pour sauvegarder votre progression ou commencer une nouvelle partie.</p>
+    </div>
+
+    <div id="victory-modal" class="modal">
+        <div class="modal-content">
+            <div class="trophy">🏆</div>
+            <h2>Félicitations !</h2>
+            <p id="victory-message">Vous avez terminé le jeu !</p>
+            <button class="btn btn-reset" onclick="closeModal()">Rejouer</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
