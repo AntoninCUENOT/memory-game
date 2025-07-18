@@ -224,7 +224,7 @@ class MemoryGame {
             gameStarted: this.gameStarted,
             gameWon: this.gameWon,
             elapsedTime: this.elapsedTime,
-            startTime: this.startTime ? Date.now() - this.elapsedTime : null
+            startTime: this.startTime
         };
 
         // Sauvegarder dans le localStorage
@@ -250,7 +250,7 @@ class MemoryGame {
         this.gameStarted = gameState.gameStarted;
         this.gameWon = gameState.gameWon;
         this.elapsedTime = gameState.elapsedTime;
-        this.startTime = gameState.startTime;
+        this.startTime = Date.now() - this.elapsedTime;
 
         this.renderCards();
         this.updateDisplay();
